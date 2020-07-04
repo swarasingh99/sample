@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>Homepage</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<script type="text/javascript">
+		function myFunction() // no ';' here
+       {
+          var elem = document.getElementById("follow");
+          if (elem.value=="+ Follow") elem.value = "Following";
+          else elem.value = "+ Follow"; 
+        }
+
+       function likeFunction(elem2)
+        {
+        	alert(elem2.src);
+          if (elem2.src == "file:///C:/Users/Mahe/Desktop/Web%20Dev/linkedin%20homepage/like.png") 
+          {
+          	elem2.src = "like_blue.png";
+          }
+          else 
+          {
+          	elem2.src = "like.png";
+		  } 
+        }
+        function workFunction()
+		{
+
+			var elem3= document.getElementById('work').className;
+			
+            if( elem3=='hide'){
+            	elem3='show';
+            } 
+            else{
+            	elem3= 'hide';
+            } 
+            document.getElementById('work').className= elem3;
+		}
+	</script>
+	<header>  <!--to have the upper taskbar with searchbar, drop down menu icons etc, it has to be postion:fixed-->
+		<nav>
+			<img src="link logo.png" alt="linkedin logo" class="thumbnail"/>
+		    <input type="text" placeholder="Search..">   <!--searchbar-->
+		    <div class="tab first"><img src="home.png" class="icon" alt="home">
+		    	<br>Home
+		    </div>
+		    <div class="tab"><img src="network.png" class="icon" alt="network">
+		    	<br>My Network
+		    </div>
+		    <div class="tab"><img src="job.png" class="icon" >
+		    	<br>Jobs
+		    </div>
+		    <div class="tab"><img src="messaging.png" class="icon" >
+		    	<br>Messaging
+		    </div>
+		    <div class="tab"><img src="notifications.png" class="icon" a>
+		    	<br>Notifications
+		    </div>
+
+		    <a href="https://www.linkedin.com/in/swara-singh-3b2781136/">
+		    	<div class="tab me"><img src="girl.png" class="icon" >
+		    	 <br>Me <span>  <i class="arrow"></i></span>
+		    	 <ul id="dropdown">
+		    		<li><span>Swara Singh</span><br>Sub Editor(Design)- The MIT Post<br> Junior Board (Publicity & Design)- Rotaract  Club Of Manipal</li>
+		    	 </ul>
+		    	</div>
+		    </a>
+
+		    <button id="workButton" onclick="workFunction()">
+		    	<div class="tab"><img src="menu.png" class="icon" alt="home">
+		    	<br>Work <span>  <i class="arrow"></i></span>
+		        </div>
+		    </button>
+		    
+
+		    
+		    <div class="tab">Try Premium Free for 1 Month</div>
+
+		</nav>		
+	</header>
+
+	<main>    <!--to have the home feed -->
+		<br><br><br>
+		<div class="hide" id="work">
+			<img src="pic1.png" class="infopic">
+			<button style="position: absolute;top:0;right: 0;" onclick="workFunction()">x</button>
+			<img src="pic2.png" class="infopic">
+		</div>
+
+		<section class="left"></section>
+		<section class="right"></section>
+		<section class="box1">
+			<div id="top">
+				<span>Pratibha Shrivastav, Abhik Sarkar </span><p class="grey"> and 731 other connections follow </p>
+				<span><a href="https://www.linkedin.com/company/linkedin/" style="color:black"> Linkedin</a></span>.
+			</div>
+
+			<div class="heading">
+				<a href="https://www.linkedin.com/company/linkedin/" style="color:black">
+				   <img src="link logo.png" alt="linkedin logo" class="dp"/>
+				   <div class="name">
+					  <span id="linkedin">LinkedIn</span>
+					  <br>12,107,982 followers<br>Promoted				
+				   </div>
+				</a>	
+			</div>
+
+			<input onclick="myFunction()" type="button" value="+ Follow" id="follow">
+
+
+			<!--<button id="follow" onclick="myFunction()">+ Follow</button>-->
+
+			<div class="description">
+				While many industries have been hit hard by COVID-19, some are on the rise. Here are 10 roles that are in-demand today and the skills to help you land them:<br>
+				<a href="https://lnkd.in/dBb_Cqb" style="color:#0072b1">https://lnkd.in/dBb_Cqb</a>
+			</div>
+
+			<a href="https://lnkd.in/dBb_Cqb"><img src="jobs.png" alt="10 jobs on the rise" class= "picture"/></a>
+			
+			<div class="reactions">759 * 11 comments</div>
+			<div class="reactions2">
+				<button class="like"> 
+					<img src="like.png" id="like"  onclick="likeFunction(this)"/> Like
+				</button>
+				
+				
+				  <button class="comment"><img src="comment.png" id="comment"> Comment</button>
+				  <button class="share"><img src="share.png" id="share"> Share</button>
+				  <button class="send"><img src="send.png" id="send"> Send</button>
+
+			</div>
+		</section>
+
+
+		<section class="box2">
+			
+			<div class="heading">
+				<a href="https://www.linkedin.com/in/swara-singh-3b2781136/" style="color:black">
+					<img src="girl.png" alt="linkedin logo" class="dp"/>
+				    <div class="name">
+					<span id="linkedin">Swara Singh</span>
+					<br>Software Engineer<br>2d				
+				</div>
+				</a>
+				
+			</div>
+			<div class="description">
+				Which CSS framework is good for Angular 2+ apart from Bootstrap any suggestions??
+			</div>
+			<div class="reactions">6 * 8 comments</div>
+			
+			<div class="reactions2">
+				<img src="like.png" id="like" onclick="likeFunction(this)"/> Like
+				 <!--<button class="like"><img src="like.png" id="like"> Like</button> -->
+				  <button class="comment"><img src="comment.png" id="comment"> Comment</button>
+				  <button class="share"><img src="share.png" id="share"> Share</button>
+				  <button class="send"><img src="send.png" id="send"> Send</button>
+
+			</div>
+		</section>
+	</main>
+</body>
+</html>
